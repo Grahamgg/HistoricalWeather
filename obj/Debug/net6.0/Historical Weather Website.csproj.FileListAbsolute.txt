@@ -1,0 +1,33 @@
+C:\Users\graha\Desktop\repos\Historical Weather Website\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\graha\Desktop\repos\Historical Weather Website\bin\Debug\net6.0\appsettings.json
+C:\Users\graha\Desktop\repos\Historical Weather Website\bin\Debug\net6.0\Historical Weather Website.staticwebassets.runtime.json
+C:\Users\graha\Desktop\repos\Historical Weather Website\bin\Debug\net6.0\Historical Weather Website.exe
+C:\Users\graha\Desktop\repos\Historical Weather Website\bin\Debug\net6.0\Historical Weather Website.deps.json
+C:\Users\graha\Desktop\repos\Historical Weather Website\bin\Debug\net6.0\Historical Weather Website.runtimeconfig.json
+C:\Users\graha\Desktop\repos\Historical Weather Website\bin\Debug\net6.0\Historical Weather Website.dll
+C:\Users\graha\Desktop\repos\Historical Weather Website\bin\Debug\net6.0\Historical Weather Website.pdb
+C:\Users\graha\Desktop\repos\Historical Weather Website\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\Historical Weather Website.csproj.AssemblyReference.cache
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\Historical Weather Website.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\Historical Weather Website.AssemblyInfoInputs.cache
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\Historical Weather Website.AssemblyInfo.cs
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\Historical Weather Website.csproj.CoreCompileInputs.cache
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\Historical Weather Website.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\Historical Weather Website.RazorAssemblyInfo.cache
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\Historical Weather Website.RazorAssemblyInfo.cs
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\staticwebassets\msbuild.Historical Weather Website.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\staticwebassets\msbuild.build.Historical Weather Website.props
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Historical Weather Website.props
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Historical Weather Website.props
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\scopedcss\bundle\Historical Weather Website.styles.css
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\scopedcss\projectbundle\Historical Weather Website.bundle.scp.css
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\Historical Weather Website.csproj.CopyComplete
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\Historical Weather Website.dll
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\refint\Historical Weather Website.dll
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\Historical Weather Website.pdb
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\Historical Weather Website.genruntimeconfig.cache
+C:\Users\graha\Desktop\repos\Historical Weather Website\obj\Debug\net6.0\ref\Historical Weather Website.dll

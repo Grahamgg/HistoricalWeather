@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Historical Weather Website.props" />
+</Project>
