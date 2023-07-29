@@ -1,23 +1,35 @@
 ﻿@model WeatherForecast
 
-<form asp-controller="Weather" asp-action="Index" method="post">
-    <label for="city">City</label>
-    <input type="text" id="city" name="city" />
+<div class="top-container">
+    <form asp-controller="Weather" asp-action="Index" method="post">
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" />
 
-    <label for="date">Date</label>
-    <input type="date" id="date" name="date" />
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" />
 
-    <label for="units">Units:</label>
-    <select id="units" name="units">
-        <option value="imperial">Fahrenheit</option>
-        <option value="metric">Celsius</option>
-    </select>
+        <label for="units">Units:</label>
+        <select id="units" name="units">
+            <option value="imperial">Fahrenheit</option>
+            <option value="metric">Celsius</option>
+        </select>
 
-    <input type="submit" value="Get Weather" />
-</form>
+        <input type="submit" value="Get Weather" />
+    </form>
 
-@if (Model != null)
-{
-    <h2>Weather for @Model.name</h2>
-    <p>Temperature: @Model.main.temp</p>
-}
+    @if (Model != null)
+    {
+        <div id="weather-data">
+            <h2>Weather for @Model.name</h2>
+            <p>Temperature: @Model.main.temp</p>
+            <p>Weather condition: @Model.weather[0].main</p>
+            <p>Description: @Model.weather[0].description</p>
+            <p>Wind Speed: @Model.wind.speed</p>
+            <p>Cloudiness: @Model.clouds.all</p>
+        </div>
+    }
+</div>
+
+
+
+
