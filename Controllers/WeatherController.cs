@@ -1,6 +1,10 @@
 ﻿using Historical_Weather_Website.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 public class WeatherController : Controller
 {
@@ -11,10 +15,11 @@ public class WeatherController : Controller
         _weatherForecastService = weatherForecastService;
     }
 
-    private async Task<(double Latitude, double Longitude)> GetLatLonFromCityName(string city)
+    private async Task<(double Latitude, double Longitude)> GetLatLonFromCityName(string city, string state)
     {
+        var locationQuery = $"{city},{state}";
         var request = new HttpRequestMessage(HttpMethod.Get,
-            $"http://api.openweathermap.org/geo/1.0/direct?q={city}&limit=1&appid={_weatherForecastService.ApiKey}");
+            $"http://api.openweathermap.org/geo/1.0/direct?q={locationQuery}&limit=1&appid={_weatherForecastService.ApiKey}");
 
         var client = _weatherForecastService.Client;
         var response = await client.SendAsync(request);
@@ -38,11 +43,12 @@ public class WeatherController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Index(string city, string date, string units)
+    public async Task<IActionResult> Index(string city, string state, string date, string units)
     {
-        (double Latitude, double Longitude) = await GetLatLonFromCityName(city);
+        (double Latitude, double Longitude) = await GetLatLonFromCityName(city, state);
 
-        WeatherForecast forecast = await _weatherForecastService.GetWeatherForecastAsync(city, units);
+        
+        WeatherForecast forecast = await _weatherForecastService.GetCurrentWeatherForecastAsync(Latitude, Longitude, units);
 
         return View(forecast);
     }
@@ -54,5 +60,7 @@ public class Location
     public double lat { get; set; }
     public double lon { get; set; }
 }
+
+
 
 

@@ -2,33 +2,60 @@
 
 <div class="top-container">
     <form asp-controller="Weather" asp-action="Index" method="post">
+        <label for="state">State</label>
+        <input type="text" id="state" name="state" />
+
         <label for="city">City</label>
         <input type="text" id="city" name="city" />
 
         <label for="date">Date</label>
         <input type="date" id="date" name="date" />
 
-        <label for="units">Units:</label>
+        <label for="units">Units</label>
         <select id="units" name="units">
             <option value="imperial">Fahrenheit</option>
-            <option value="metric">Celsius</option>
+            <option value="metric">Metric</option>
+            
         </select>
 
         <input type="submit" value="Get Weather" />
     </form>
-
-    @if (Model != null)
-    {
-        <div id="weather-data">
-            <h2>Weather for @Model.name</h2>
-            <p>Temperature: @Model.main.temp</p>
-            <p>Weather condition: @Model.weather[0].main</p>
-            <p>Description: @Model.weather[0].description</p>
-            <p>Wind Speed: @Model.wind.speed</p>
-            <p>Cloudiness: @Model.clouds.all</p>
-        </div>
-    }
+   
 </div>
+
+
+
+@if (Model != null)
+{
+    var tempImg = "";
+    if (Model.main.temp <= 50) { tempImg = "Cold"; }
+    else if (Model.main.temp > 50 && Model.main.temp <= 70) { tempImg = "Warm"; }
+    else { tempImg = "Hot"; }
+
+    <div id="weather-data">
+
+        <div class="result-box">
+            <h2>Weather for @Model.name, @Model.sys.country</h2>
+        </div>
+
+        <div class="result-box">
+            <img src="~/images/@(tempImg).png" alt="@tempImg" width="50" height="50" />
+            <p>Temperature: @Model.main.temp</p>
+        </div>
+
+        <div class="result-box">
+            <img src="~/images/@(Model.weather[0].main).png" alt="@Model.weather[0].main" width="50" height="50" />
+            <p>Weather condition: @Model.weather[0].main</p>
+        </div>
+    </div>
+}
+
+
+
+
+
+
+
 
 
 

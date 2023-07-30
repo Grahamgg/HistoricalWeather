@@ -1,5 +1,9 @@
 ﻿using Historical_Weather_Website.Models;
 using Newtonsoft.Json;
+using Microsoft.Extensions.Configuration;
+using System.Net.Http;
+using System.Threading.Tasks;
+using System.Globalization;
 
 public class WeatherForecastService
 {
@@ -12,9 +16,9 @@ public class WeatherForecastService
         ApiKey = configuration["OpenWeatherMapApiKey"];
     }
 
-    public async Task<WeatherForecast> GetWeatherForecastAsync(string city, string units)
+    public async Task<WeatherForecast> GetCurrentWeatherForecastAsync(double lat, double lon, string units)
     {
-        var response = await Client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?q={city}&units={units}&appid={ApiKey}");
+        var response = await Client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&units={units}&appid={ApiKey}");
         response.EnsureSuccessStatusCode();
 
         var content = await response.Content.ReadAsStringAsync();
@@ -23,3 +27,5 @@ public class WeatherForecastService
         return forecast;
     }
 }
+
+

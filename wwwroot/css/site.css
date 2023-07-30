@@ -1,6 +1,6 @@
 html {
     font-size: 16px;
-    background-color: #fff; /* white background */
+    background-color: #fff;
 }
 
 body {
@@ -11,34 +11,119 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+    background: url('/images/CloudsBackground.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
 }
 
-
-.top-container {
-    width: 100%;
-    text-align: center;
-    padding-top: 20px;
+.top-container, .result-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    margin: 20px auto;
+    padding: 20px;
 }
+
+    .top-container form, .result-box {
+        max-width: 800px;
+        margin: 0 auto;
+    }
 
 .container {
     max-width: 800px;
-    margin: 20px auto; /* increase the top margin */
+    margin: 20px auto;
     padding: 20px;
 }
 
 header {
     text-align: center;
-    padding: 10px; /* reduce the padding */
-    color: #007bff; /* blue text color */
+    padding: 10px;
+    color: #007bff;
 }
 
 main {
     padding: 20px;
-    color: #333; /* dark gray text */
+    color: #333;
 }
 
-footer {
-    text-align: center;
+input[type="text"], input[type="date"], select {
+    font-size: 1.5rem;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#weather-data {
+    font-size: 1.5rem;
+}
+
+.result-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-    color: #007bff; /* blue text color */
+    margin-bottom: 20px;
+}
+
+.result-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+    .result-box .result-item {
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        padding: 20px;
+        flex-basis: 30%;
+        text-align: center;
+    }
+
+    .result-box img {
+        width: 100px; 
+        height: 100px; 
+        display: block;
+        margin: 20px auto;
+    }
+
+    .result-box:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+@media only screen and (max-width: 800px) {
+    
+
+    .result-box .result-item {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    body {
+        align-items: flex-start;
+    }
+
+    .top-container form, .result-box {
+        max-width: 100%;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    input[type="text"], input[type="date"], select {
+        font-size: 1rem;
+    }
+
+    #weather-data {
+        font-size: 1rem;
+    }
+
+    .result-box {
+        flex-direction: column;
+    }
 }

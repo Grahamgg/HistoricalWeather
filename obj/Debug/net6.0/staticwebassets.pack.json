@@ -13,6 +13,42 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\graha\\Desktop\\repos\\Historical Weather Website\\wwwroot\\images\\Clear.png",
+      "PackagePath": "staticwebassets\\images\\Clear.png"
+    },
+    {
+      "Id": "C:\\Users\\graha\\Desktop\\repos\\Historical Weather Website\\wwwroot\\images\\Clouds.png",
+      "PackagePath": "staticwebassets\\images\\Clouds.png"
+    },
+    {
+      "Id": "C:\\Users\\graha\\Desktop\\repos\\Historical Weather Website\\wwwroot\\images\\CloudsBackground.jpg",
+      "PackagePath": "staticwebassets\\images\\CloudsBackground.jpg"
+    },
+    {
+      "Id": "C:\\Users\\graha\\Desktop\\repos\\Historical Weather Website\\wwwroot\\images\\Cold.png",
+      "PackagePath": "staticwebassets\\images\\Cold.png"
+    },
+    {
+      "Id": "C:\\Users\\graha\\Desktop\\repos\\Historical Weather Website\\wwwroot\\images\\Hot.png",
+      "PackagePath": "staticwebassets\\images\\Hot.png"
+    },
+    {
+      "Id": "C:\\Users\\graha\\Desktop\\repos\\Historical Weather Website\\wwwroot\\images\\Rain.png",
+      "PackagePath": "staticwebassets\\images\\Rain.png"
+    },
+    {
+      "Id": "C:\\Users\\graha\\Desktop\\repos\\Historical Weather Website\\wwwroot\\images\\Snow.png",
+      "PackagePath": "staticwebassets\\images\\Snow.png"
+    },
+    {
+      "Id": "C:\\Users\\graha\\Desktop\\repos\\Historical Weather Website\\wwwroot\\images\\Warm.png",
+      "PackagePath": "staticwebassets\\images\\Warm.png"
+    },
+    {
+      "Id": "C:\\Users\\graha\\Desktop\\repos\\Historical Weather Website\\wwwroot\\images\\icon-set-159397_1920.png",
+      "PackagePath": "staticwebassets\\images\\icon-set-159397_1920.png"
+    },
+    {
       "Id": "C:\\Users\\graha\\Desktop\\repos\\Historical Weather Website\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
