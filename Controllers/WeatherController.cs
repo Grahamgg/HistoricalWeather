@@ -43,12 +43,12 @@ public class WeatherController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Index(string city, string state, string date, string units)
+    public async Task<IActionResult> Index(string city, string state, string zipcode, string date, string units)
     {
         (double Latitude, double Longitude) = await GetLatLonFromCityName(city, state);
 
         
-        WeatherForecast forecast = await _weatherForecastService.GetCurrentWeatherForecastAsync(Latitude, Longitude, units);
+        WeatherForecast forecast = await _weatherForecastService.GetCurrentWeatherForecastAsync(zipcode, units);
 
         return View(forecast);
     }

@@ -16,9 +16,9 @@ public class WeatherForecastService
         ApiKey = configuration["OpenWeatherMapApiKey"];
     }
 
-    public async Task<WeatherForecast> GetCurrentWeatherForecastAsync(double lat, double lon, string units)
+    public async Task<WeatherForecast> GetCurrentWeatherForecastAsync(string zipcode, string units)
     {
-        var response = await Client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&units={units}&appid={ApiKey}");
+        var response = await Client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?zip={zipcode},us&units={units}&appid={ApiKey}");
         response.EnsureSuccessStatusCode();
 
         var content = await response.Content.ReadAsStringAsync();
@@ -26,6 +26,7 @@ public class WeatherForecastService
 
         return forecast;
     }
+
 }
 
 
