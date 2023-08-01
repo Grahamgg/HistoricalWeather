@@ -1,5 +1,7 @@
-﻿using Historical_Weather_Website.Models;
+﻿using System.IO;
+using Historical_Weather_Website.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Hosting;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -9,11 +11,14 @@ using System.Threading.Tasks;
 public class WeatherController : Controller
 {
     private readonly WeatherForecastService _weatherForecastService;
+    private readonly IWebHostEnvironment _env;
 
-    public WeatherController(WeatherForecastService weatherForecastService)
+    public WeatherController(WeatherForecastService weatherForecastService, IWebHostEnvironment env) 
     {
         _weatherForecastService = weatherForecastService;
+        _env = env;  
     }
+
 
     private async Task<(double Latitude, double Longitude)> GetLatLonFromCityName(string city, string state)
     {
@@ -49,6 +54,15 @@ public class WeatherController : Controller
 
         
         WeatherForecast forecast = await _weatherForecastService.GetCurrentWeatherForecastAsync(zipcode, units);
+
+        foreach (var weather in forecast.weather)
+        {
+            var imgPath = Path.Combine(_env.WebRootPath, "images", $"{weather.main}.png");
+            if (!System.IO.File.Exists(imgPath))
+            {
+                weather.main = "Clear";
+            }
+        }
 
         return View(forecast);
     }
