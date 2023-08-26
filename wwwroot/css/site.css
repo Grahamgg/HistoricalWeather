@@ -64,14 +64,6 @@ input[type="text"], input[type="date"], select {
     margin-bottom: 20px;
 }
 
-.result-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
     .result-box .result-item {
         background-color: #f9f9f9;
         border: 1px solid #ccc;
@@ -82,8 +74,8 @@ input[type="text"], input[type="date"], select {
     }
 
     .result-box img {
-        width: 100px; 
-        height: 100px; 
+        width: 100px;
+        height: 100px;
         display: block;
         margin: 20px auto;
     }
@@ -91,16 +83,6 @@ input[type="text"], input[type="date"], select {
     .result-box:hover {
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     }
-
-@media only screen and (max-width: 800px) {
-    
-
-    .result-box .result-item {
-        flex-basis: 100%;
-        margin-bottom: 20px;
-    }
-}
-
 
 @media only screen and (max-width: 800px) {
     body {
@@ -126,4 +108,9 @@ input[type="text"], input[type="date"], select {
     .result-box {
         flex-direction: column;
     }
+
+        .result-box .result-item {
+            flex-basis: 100%;
+            margin-bottom: 20px;
+        }
 }

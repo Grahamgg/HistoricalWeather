@@ -1,4 +1,5 @@
 ﻿
+
 $(document).ready(function () {
     // Prevent non-letter input in 'city' field
     $('#city').on('keypress', function (event) {
